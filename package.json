@@ -1,8 +1,8 @@
 {
-  "name": "node-template",
+  "name": "node-compressor",
   "version": "1.0.0",
   "type": "module",
-  "description": "Base template for projects developed on the Node.JS Course by LearnThis",
+  "description": "Second practice on the Node.JS Course by LearnThis",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
@@ -18,10 +18,10 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@commitlint/prompt-cli": "17.0.3",
-    "eslint": "8.22.0",
+    "@commitlint/cli": "17.1.1",
+    "@commitlint/config-conventional": "17.1.0",
+    "@commitlint/prompt-cli": "17.1.1",
+    "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
