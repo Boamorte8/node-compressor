@@ -5,5 +5,5 @@ export const getOutputName = (pathFile) => {
   const extFile = extname(pathFile);
   const nameFile = basename(pathFile, extFile);
   const newDate = new Date().getTime().toString();
-  return join(dirFile, '../out', `${nameFile}-${newDate}.gz`);
+  return join(dirFile, '../out', `${nameFile}-${newDate}${extFile}.gz`);
 };

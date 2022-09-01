@@ -2,6 +2,7 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 import { compressFile } from '#Lib/compressFile.js';
+import createTitle from '#Lib/printTitle.js';
 import { getOutputName } from '#Lib/getOutputName.js';
 import { InvalidInputError } from '#Errors/invalidInputError.js';
 import { processErrors } from '#Errors/processErrors.js';
@@ -12,6 +13,7 @@ const BASE_PATH = dirname(fileURLToPath(import.meta.url));
 
 export const bootstrap = async () => {
   try {
+    await createTitle('Compressor');
     // 1 Create the input and output path
     const userAnswer = await promptQuestion(
       'Introduce your action or operation:\n'
@@ -32,10 +34,6 @@ export const bootstrap = async () => {
 
     // 2 Create reading, compression and writing streams
     await compressFile(pathFile, outputPath);
-
-    // 4. Add progress bar
-    // 5. Add pause control
-    // 6. Add resume control
   } catch (error) {
     processErrors(error);
   }

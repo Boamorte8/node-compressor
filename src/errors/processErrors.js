@@ -13,7 +13,6 @@ export const processErrors = (error) => {
     error instanceof ProcessingError
   ) {
     console.log(`${error.message}\n`);
-    process.exit(1);
   } else
     console.log(`Unexpected error: ${error.message}. Stack: ${error.stack}\n`);
   process.exit(1);
